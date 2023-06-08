@@ -10,11 +10,11 @@ public class Skill extends AbstractEntity {
     @Size(max = 150, message = "Skill description is limited to 150 characters")
     private String description;
 
-    public String getLocation() {
+    public String getDescription() {
         return description;
     }
 
-    public void setLocation(String location) {
-        this.description = location;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -15,7 +15,7 @@ import java.util.Objects;
 public abstract class AbstractEntity {
     @Id
     @GeneratedValue
-private int id;
+    private int id;
 
 
 @NotBlank(message = "Name is required")
