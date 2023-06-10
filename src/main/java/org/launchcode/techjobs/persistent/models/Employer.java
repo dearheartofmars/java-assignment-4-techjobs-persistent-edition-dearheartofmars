@@ -13,12 +13,12 @@ public class Employer extends AbstractEntity {
     private String location;
 
     public Employer(){}
+    @OneToMany(mappedBy = "employer")
+    private  List<Job> jobs = new ArrayList<>();
+
     public String getLocation() {
         return location;
     }
-
-    @ManyToMany(mappedBy = "employerRepository")
-    private  List<Job> jobs = new ArrayList<>();
 
     public void setLocation(String location) {
         this.location = location;
