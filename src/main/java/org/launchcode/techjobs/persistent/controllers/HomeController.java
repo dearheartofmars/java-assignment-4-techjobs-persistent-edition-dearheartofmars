@@ -51,8 +51,8 @@ public class HomeController {
         if (errors.hasErrors()) {
             return "add";
         }
-        Employer employer1 = employerRepository.findById(employerId).orElse(new Employer());
-        newJob.setEmployer(employer1);
+        Employer employer = employerRepository.findById(employerId).orElse(new Employer());
+        newJob.setEmployer(employer);
         jobRepository.save(newJob);
         return "redirect:";
     }
