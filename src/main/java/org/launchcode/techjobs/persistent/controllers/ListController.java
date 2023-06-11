@@ -16,9 +16,9 @@ import java.util.HashMap;
 /**
  * Created by LaunchCode
  */
-@Controller
-@RequestMapping(value = "list")
-public class ListController {
+    @Controller
+    @RequestMapping(value = "list")
+    public class ListController {
     @Autowired
     private SkillRepository skillRepository;
     @Autowired

@@ -2,7 +2,6 @@ package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ public class Skill extends AbstractEntity {
     @NotBlank
     @Size(max = 150, message = "Skill description is limited to 150 characters")
     private String description;
-    @ManyToMany(mappedBy="skills")
+    @ManyToMany(mappedBy= "skills")
     private List<Job> jobs = new ArrayList<>() {};
     public Skill(){};
 
@@ -26,5 +25,12 @@ public class Skill extends AbstractEntity {
         this.description = description;
     }
 
+    public List<Job> getJobs() {
+        return jobs;
     }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
+}
 
